@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   getTitleText() {
-    return element(by.css('jad-root h1')).getText();
+    return element(by.css('lmk-app h1')).getText();
   }
 }

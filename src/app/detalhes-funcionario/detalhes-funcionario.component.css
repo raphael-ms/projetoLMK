@@ -1,0 +1,53 @@
+label {
+  display: inline-block;
+  width: 3em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+input {
+  color: #607D8B;
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  color: #607D8B;
+  border: none;
+  border-radius: 4px;
+  cursor: hand;
+  height: 2.3em;
+}
+
+button:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+button.active {
+  color: #039be5;
+}
+
+button:visited, a:link {
+  color: #607d8b;
+}
+
+
+#desembarcado{
+  background-color: #00bf09;
+  color: white;
+  padding: 10px;
+}
+#desembarcado:hover{
+  background-color: #02e20c;
+}
+
+#embarcado{
+  background-color: #d31313;
+  color: white;
+  padding: 10px;
+}
+#embarcado:hover{
+  background-color: #f21515;
+}

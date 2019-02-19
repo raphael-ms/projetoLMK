@@ -1,0 +1,22 @@
+<button style="float: right;" (click)="voltar()">VOLTAR</button>
+<table>
+  <tr>
+    <td>Nome: </td>
+    <td><input #nomeFuncionario /></td>
+  </tr>
+  <tr>
+    <td>Função: </td>
+    <td><input #funcaoFuncionario /></td>
+  </tr>
+  <tr>
+    <td>Empresa: </td>
+    <td><input #empresaFuncionario /></td>
+  </tr>
+</table>
+
+
+
+<button (click)="adicionarFuncionario(nomeFuncionario.value, funcaoFuncionario.value, empresaFuncionario.value);
+                 nomeFuncionario.value=''; funcaoFuncionario.value=''; empresaFuncionario.value='' ">
+CADASTRAR
+</button>

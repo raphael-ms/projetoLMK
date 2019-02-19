@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'jad-root',
+  selector: 'lmk-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'jedi-academy';
+  title = 'OIL&GAS Corp.';
 }

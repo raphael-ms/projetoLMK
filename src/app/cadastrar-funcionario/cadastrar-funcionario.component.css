@@ -1,0 +1,54 @@
+table{
+  margin-top: 30px;
+}
+
+label {
+  display: inline-block;
+  width: 3em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+input {
+  color: #607D8B;
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+  border-radius: 2px;
+
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  color: #607D8B;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  height: 2.3em;
+}
+
+button:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+button.active {
+  color: #039be5;
+}
+
+button {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+button:visited, a:link {
+  color: #607d8b;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

@@ -1,0 +1,140 @@
+a {
+  text-align: center ;
+  color: #888;
+  text-decoration: none;
+  width: 100%;
+}
+
+label {
+  width: 3em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+input {
+  color: #607D8B;
+  height: 1.5em;
+  font-size: 1em;
+  padding-left: .4em;
+  border-radius: 4px;
+}
+h5{
+  color: #607D8B;
+  font-weight: bold;
+}
+
+button {
+  font-family: Arial;
+  background-color: #eee;
+  color: #607D8B;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: hand;
+  height: 2.3em;
+}
+
+button:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+button.active {
+  color: #039be5;
+}
+
+button {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+button:visited, a:link {
+  color: #607d8b;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  padding: 8px;
+  text-align:left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  padding: 8px;
+  text-align: left ;
+  border-bottom: 2px solid #848181;
+}
+
+tr:hover {
+  background-color:#f5f5f5;
+  }
+
+#desembarcado{
+  background-color: #00bf09;
+  color: white;
+  padding: 10px;
+}
+
+#embarcado{
+  background-color: #d31313;
+  color: white;
+  padding: 10px;
+}
+
+#desembarcado-superior{
+  background-color: #00bf09;
+  color: white;
+  padding: 10px;
+  width: 170px;
+  margin-top: -10px;
+}
+#desembarcado-superior:hover{
+  background-color: #02e20c;
+}
+
+#embarcado-superior{
+  background-color: #d31313;
+  color: white;
+  padding: 10px;
+  width: 170px;
+}
+#embarcado-superior:hover{
+  background-color: #f21515;
+}
+
+[data-tooltip] {
+  position: relative;
+  font-size: 10px;
+}
+
+[data-tooltip]:after {
+  display: none;
+  position: absolute;
+  top: -5px;
+  padding: 5px;
+  border-radius: 3px;
+  left: calc(100% + 2px);
+  content: attr(data-tooltip);
+  white-space: nowrap;
+  background-color: #d31313;
+  color: White;
+}
+
+[data-tooltip]:hover:after {
+  display: block;
+}
+li{
+  float: right;
+  list-style: none;
+}
+.quebra {
+      clear: right;
+  }

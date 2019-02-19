@@ -1,0 +1,47 @@
+<ul>
+  <li style="width: 170px; font-size: 13px;" >FILTRAR POR:</li>
+  <li class="quebra"><button (click)="buscarPorFuncionariosEmbarcados()" id="embarcado-superior">EMBARCADOS: {{funcionariosEmbarcados.length}} </button></li>
+  <li class="quebra"><button (click)="buscarPorFuncionariosDesembarcados()" id="desembarcado-superior">DESEMBARCADOS: {{funcionariosDesembarcados.length}}</button></li>
+</ul>
+
+  <h5 style="margin-bottom: -7px;">INFORME O PERIODO QUE DESEJA BUSCAR:</h5>
+  <label>Data Embarque:</label>
+  <input type="date" #dataEmbarque/>
+  <label>Data Desembarque:</label>
+  <input type="date" #dataDesembarque/>
+  <button (click)="buscarPorPeriodo(dataEmbarque.value, dataDesembarque.value)"> BUSCAR </button>
+  <br>
+  <a style="font-size: 10px; margin-bottom: 5px;">OBS.: CASO O FUNCIONARIO AINDA ESTEJA EMBARCADO, INFORME APENAS A DATA DE EMBARQUE</a>
+  <span data-tooltip="PARA EMBARCAR OU DESEMBARCAR UM FUNCIONÁRIO, CLIQUE EM CIMA DELE"><button> ? </button></span>
+
+
+<table>
+  <tr>
+    <th></th>
+    <th>Nome</th>
+    <th>Função</th>
+    <th>Empresa</th>
+    <th>Status</th>
+  </tr>
+  </table>
+  <table>
+  <tr *ngFor="let funcionario of funcionarios">
+    <a routerLink="/detalhes/{{funcionario.id}}">
+    <td style="width: 50px;">{{funcionario.id}}</td>
+    <td style="width: 240px;">{{funcionario.nome}}</td>
+    <td style="width: 305px;">{{funcionario.funcao}}</td>
+    <td style="width: 305px;">{{funcionario.empresa}}</td>
+    <td style="width: 305px;">
+      <button *ngIf="funcionario.dataDesembarque === null && funcionario.dataEmbarque === null "
+                   id="desembarcado">DESEMBARCADO</button>
+      <button *ngIf="funcionario.dataDesembarque === null && funcionario.dataEmbarque != null"
+                  id="embarcado">EMBARCADO</button>
+      <button *ngIf="funcionario.dataDesembarque != null"
+                  id="desembarcado">DESEMBARCADO</button>
+    </td>
+    </a>
+  </tr>
+
+</table>
+
+<h5>RESULTADOS ENCONTRADOS: {{funcionarios.length}}</h5>

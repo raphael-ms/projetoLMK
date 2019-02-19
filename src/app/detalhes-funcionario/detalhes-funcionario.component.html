@@ -1,0 +1,77 @@
+<div *ngIf="funcionario">
+
+  <h2>Dados do funcionário(a): {{funcionario.nome | uppercase}}
+  <button style="float: right;" (click)="voltar()">VOLTAR</button></h2>
+
+
+    <table>
+      <tr>
+        <td>Status: </td>
+        <td>
+          <button *ngIf="funcionario.dataDesembarque === null && funcionario.dataEmbarque === null "
+                       id="desembarcado">DESEMBARCADO</button>
+          <button *ngIf="funcionario.dataDesembarque === null && funcionario.dataEmbarque != null"
+                      id="embarcado">EMBARCADO</button>
+          <button *ngIf="funcionario.dataDesembarque != null"
+                      id="desembarcado">DESEMBARCADO</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Nome: </td>
+        <td><input value="{{funcionario.nome}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Função: </td>
+        <td><input value="{{funcionario.funcao}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Empresa: </td>
+        <td><input value="{{funcionario.empresa}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Data Ultimo Embarque: </td>
+        <td><input value="{{funcionario.dataEmbarque | date: 'dd/MM/yyyy'}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Data Ultimo Desembarque: </td>
+        <td><input value="{{funcionario.dataDesembarque | date: 'dd/MM/yyyy'}}" readonly></td>
+      </tr>
+</table>
+<hr>
+
+<!-- DIV VARIAVEL, CONFORME O FUNCIONÁRIO ESTEJA EMBARCADO/DESEMBARCADO -->
+
+<div *ngIf="funcionario.dataDesembarque === null && funcionario.dataEmbarque === null ">
+  <h2>EMBARCAR FUNCIONÁRIO</h2>
+  <table>
+    <tr>
+      <td>Data de Embarque: </td>
+      <td><input type="date" #dataEmbarque /></td>
+    </tr>
+  </table>
+  <button (click)="embarcarFuncionario(dataEmbarque.value); dataEmbarque.value=''; ">EMBARCAR</button>
+</div>
+<div *ngIf="funcionario.dataDesembarque === null && funcionario.dataEmbarque != null">
+  <h2>DESEMBARCAR FUNCIONÁRIO</h2>
+  <table>
+    <tr>
+      <td>Data de Desembarque: </td>
+      <td><input type="date" #dataDesembarque /></td>
+    </tr>
+  </table>
+  <button  (click)="desembarcarFuncionario(dataDesembarque.value); dataDesembarque.value=''; " >DESEMBARCAR</button>
+</div>
+
+
+<div *ngIf="funcionario.dataDesembarque != null">
+  <h2>EMBARCAR FUNCIONÁRIO</h2>
+  <table>
+    <tr>
+      <td>Data de Embarque: </td>
+      <td><input type="date" #dataEmbarque /></td>
+    </tr>
+  </table>
+  <button (click)="embarcarFuncionario(dataEmbarque.value); dataEmbarque.value=''; ">EMBARCAR</button>
+</div>
+
+</div>

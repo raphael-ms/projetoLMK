@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to jedi-academy!');
+    expect(page.getTitleText()).toEqual('Welcome to OIL&GAS Corp.');
   });
 });
