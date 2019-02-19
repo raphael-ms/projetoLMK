@@ -47,7 +47,7 @@ export class Validacao{
       return true;
     }
 
-    validadorDeDataEmbarque(dataEmbarque: string): boolean{
+    validadorDeDataEmbarque(dataEmbarque: Date): boolean{
       var converterDataEmbarque = new Date(dataEmbarque);
 
       if (!dataEmbarque){

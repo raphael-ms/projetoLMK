@@ -4,14 +4,14 @@
   <li class="quebra"><button (click)="buscarPorFuncionariosDesembarcados()" id="desembarcado-superior">DESEMBARCADOS: {{funcionariosDesembarcados.length}}</button></li>
 </ul>
 
-  <h5 style="margin-bottom: -7px;">INFORME O PERIODO QUE DESEJA BUSCAR:</h5>
+  <h5 style="margin-bottom: -7px;">INFORME O PERÍODO QUE DESEJA BUSCAR:</h5>
   <label>Data Embarque:</label>
   <input type="date" #dataEmbarque/>
   <label>Data Desembarque:</label>
   <input type="date" #dataDesembarque/>
   <button (click)="buscarPorPeriodo(dataEmbarque.value, dataDesembarque.value)"> BUSCAR </button>
   <br>
-  <a style="font-size: 10px; margin-bottom: 5px;">OBS.: CASO O FUNCIONARIO AINDA ESTEJA EMBARCADO, INFORME APENAS A DATA DE EMBARQUE</a>
+  <a style="font-size: 10px; margin-bottom: 5px;">OBS.: CASO O FUNCIONÁRIO AINDA ESTEJA EMBARCADO, INFORME APENAS A DATA DE EMBARQUE</a>
   <span data-tooltip="PARA EMBARCAR OU DESEMBARCAR UM FUNCIONÁRIO, CLIQUE EM CIMA DELE"><button> ? </button></span>
 
 
