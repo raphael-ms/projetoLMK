@@ -27,12 +27,12 @@ export class Validacao{
   }
 
 
-    validadorDeDataDesembarque(dataEmbarque: Date, dataDesembarque: Date): boolean{
+    validadorDeDataDesembarque(campoData: string,dataEmbarque: Date, dataDesembarque: Date): boolean{
       var converterDataEmbarque = new Date(dataEmbarque);
       var converterDataDesembarque = new Date(dataDesembarque);
 
-      if (!dataDesembarque){
-        alert("PREENCHA A DATA, CORRETAMENTE!");
+      if (!campoData){
+        alert("PREENCHA A DATA CORRETAMENTE!");
         return false;
       }
 
@@ -41,17 +41,17 @@ export class Validacao{
         return false;
       }
       if (converterDataEmbarque >= converterDataDesembarque){
-        alert("A DATA DE EMBARQUE DEVE SER MENOR QUE A DATA DE DESEMBARQUE");
+        alert("A DATA DE DESEMBARQUE DEVE SER MAIOR QUE A DATA DE EMBARQUE");
         return false;
       }
       return true;
     }
 
-    validadorDeDataEmbarque(dataEmbarque: Date): boolean{
+    validadorDeDataEmbarque(campoData: string,dataEmbarque: Date): boolean{
       var converterDataEmbarque = new Date(dataEmbarque);
 
-      if (!dataEmbarque){
-        alert("PREENCHA A DATA, CORRETAMENTE!");
+      if (!campoData){
+        alert("PREENCHA A DATA CORRETAMENTE!");
         return false;
       }
 

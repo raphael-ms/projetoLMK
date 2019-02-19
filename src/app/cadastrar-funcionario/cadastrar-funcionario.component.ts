@@ -36,7 +36,7 @@ export class CadastrarFuncionarioComponent implements OnInit {
     this.funcionario.funcao = funcao;
 
     //SE HOUVER ALGUM CAMPO EM BRANCO, NÃO SALVA
-    if (!nome || !funcao || !empresa ) { alert("Funcionário não salvo, falta de argumentos!"); return; }
+    if (!nome || !funcao || !empresa ) { alert("FUNCIONÁRIO NÃO CADASTRADO, PREENCHA TODOS OS CAMPOS"); return; }
 
     this.funcionarioService.adicionarFuncionario(this.funcionario);
     this.resetar();

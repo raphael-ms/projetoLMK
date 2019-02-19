@@ -42,7 +42,7 @@ export class DetalhesFuncionarioComponent implements OnInit {
     var converterDataEmbarque = new Date(dataEmbarque);
     converterDataEmbarque.setDate(converterDataEmbarque.getDate() +1);
     var funcionarioOriginal = this.funcionarioService.getFuncionarioObj(id);
-    if(this.validacao.validadorDeDataEmbarque(converterDataEmbarque)){
+    if(this.validacao.validadorDeDataEmbarque(dataEmbarque,converterDataEmbarque)){
       var funcionarioAtualizado = funcionarioOriginal;
       funcionarioAtualizado.dataEmbarque = converterDataEmbarque;
       funcionarioAtualizado.dataDesembarque = null;
@@ -57,7 +57,7 @@ export class DetalhesFuncionarioComponent implements OnInit {
     var converterDataDesembarque = new Date(dataDesembarque);
     var funcionarioOriginal = this.funcionarioService.getFuncionarioObj(id);
     converterDataDesembarque.setDate(converterDataDesembarque.getDate() +1);
-    if(this.validacao.validadorDeDataDesembarque(funcionarioOriginal.dataEmbarque,converterDataDesembarque)){
+    if(this.validacao.validadorDeDataDesembarque(dataDesembarque,funcionarioOriginal.dataEmbarque,converterDataDesembarque)){
       var funcionarioAtualizado = funcionarioOriginal;
       funcionarioAtualizado.dataDesembarque = converterDataDesembarque;
       this.funcionarioService.editarFuncionario(id,funcionarioAtualizado);
